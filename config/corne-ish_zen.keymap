@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define QWERTY 0
 #define NUMBERS 1
@@ -31,7 +32,7 @@
                 number_layer {
                         label = "NUMBER";
                         bindings = <
-   &kp TILDE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
+   &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
    &trans    &none  &none  &none  &none  &none    &none  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
    &trans    &none  &none  &none  &none  &none    &none  &none     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT 
                    &kp LCTRL &to NAV &kp ENTER    &kp SPACE &trans &kp RALT
@@ -51,10 +52,10 @@
                 bth_layer {
                         label = "BTH";
                         bindings = <
-   &bt BT_CLR &none        &none        &none        &none        &none   &kp PSCRN &kp PG_DN &kp UP   &kp PG_UP &none   &kp BSPC
-   &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none   &kp HOME  &kp LEFT  &kp DOWN &kp RIGHT &kp END &kp DEL
-   &trans     &none        &none        &none        &none        &none   &kp RGUI  &kp M     &none    &kp L     &none   &kp RSHFT
-                                         &kp LCTRL &to QWERTY &kp ENTER   &kp SPACE &trans &kp RALT
+   &bt BT_CLR &none        &none        &none        &none        &out OUT_TOG   &kp PSCRN &kp PG_DN &kp UP   &kp PG_UP &none   &kp BSPC
+   &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none          &kp HOME  &kp LEFT  &kp DOWN &kp RIGHT &kp END &kp DEL
+   &trans     &none        &none        &none        &none        &none          &kp RGUI  &kp M     &none    &kp L     &none   &kp RSHFT
+                                         &kp LCTRL &to QWERTY &kp ENTER          &kp SPACE &trans &kp RALT
                         >;
                 };
         };
